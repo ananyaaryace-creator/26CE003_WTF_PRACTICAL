@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3 - JavaScript Banking Utilities</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; line-height: 1.5; }
+        h1 { text-align: center; }
+        section { border: 1px solid #ccc; padding: 16px; margin-bottom: 18px; border-radius: 8px; }
+        label { display: inline-block; min-width: 180px; margin: 6px 0; }
+        input, select, button { padding: 7px; margin: 4px; }
+        button { cursor: pointer; }
+        .result { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Practical 3: JavaScript Fundamentals</h1>
+    <p>This practical demonstrates variables, operators, conditions, loops, functions, user input, and banking calculations.</p>
+
+    <section>
+        <h2>1. Variables: var, let and const</h2>
+        <button onclick="Variables()">Run Variable Demo</button>
+        <p id="variableDemo" class="result"></p>
+        <!-- Initializing variables using var,let and const -->
+    </section>
+
+    <section>
+        <!-- Implementing arithematic, relational operations -->
+        <h2>2. Operators</h2>
+        <label>Number 1:</label><input type="number" id="num1" value="15"><br>
+        <label>Number 2:</label><input type="number" id="num2" value="5"><br>
+        <button onclick="useOperators()">Run Operator Demo</button>
+        <div id="operatorResult" class="result"></div>
+    </section>
+
+    <section>
+        <!-- Implementing conditional operators to perform bank related calculations i.e using is,if-else,nested if -->
+        <h2>3. Loan Eligibility - if / if-else / nested if</h2>
+        <label>Age:</label><input type="number" id="age" value="25"><br>
+        <label>Monthly Income:</label><input type="number" id="income" value="35000"><br>
+        <label>Credit Score:</label><input type="number" id="creditScore" value="720"><br>
+        <button onclick="checkLoanEligibility()">Check Eligibility</button>
+        <p id="loanResult" class="result"></p>
+    </section>
+
+    <section>
+        <!-- Using switch statements to evaluate user-defined conditions -->
+        <h2>4. Account Type - switch</h2>
+        <label>Choose Account:</label>
+        <select id="accountType">
+            <option value="savings">Savings</option>
+            <option value="current">Current</option>
+            <option value="salary">Salary</option>
+            <option value=""></option>
+            <!-- <option value="1">Savings</option>
+            <option value="2">Current</option>
+            <option value="3">Salary</option> -->
+            
+        </select>
+        <button onclick="showAccountBenefit()">Show Benefit</button>
+        <p id="accountResult" class="result"></p>
+    </section>
+
+    <section>
+        <!-- Implement for loop to perform repetitive calculations sach as generating interest tables. -->
+        <h2>5. Simple Interest Table - for loop</h2>
+        <label>Principal Amount:</label><input type="number" id="principal" value="10000"><br>
+        <label>Rate (%):</label><input type="number" id="rate" value="5"><br>
+        <button onclick="generateInterestTable()">Generate 5-Year Table</button>
+        <div id="interestResult" class="result"></div>
+    </section>
+
+    <section>
+        <!-- Implement while,do-while loops for demo -->
+        <h2>6. Loop Demo - while and do-while</h2>
+        <button onclick="runLoopDemo()">Run Loop Demo</button>
+        <div id="loopResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>7. EMI Calculator - Function with Parameters and Return Value</h2>
+        <label>Loan Amount:</label><input type="number" id="loanAmount" value="100000"><br>
+        <label>Annual Interest Rate (%):</label><input type="number" id="emiRate" value="10"><br>
+        <label>Loan Period (Months):</label><input type="number" id="months" value="12"><br>
+        <button onclick="calculateAndShowEMI()">Calculate EMI</button>
+        <p id="emiResult" class="result"></p>
+    </section>
+
+    <script src="practical3.js"></script>
+</body>
+</html>
